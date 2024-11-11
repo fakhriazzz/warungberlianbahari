@@ -1,14 +1,13 @@
 import React from 'react'
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import { colors } from '../../utils'
+import { Buttons } from '../../components'
 
 const Login = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <Text style={styles.text2}>Ini Login</Text>
-            <TouchableOpacity style={styles.btnLogin} onPress={() => navigation.goBack()}>
-                <Text style={styles.text}>Ke Splash</Text>
-            </TouchableOpacity>
+            <Buttons text='Ke Splash' onPress={() => navigation.goBack()} />
         </View>
     )
 }

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Image, StyleSheet, Text, View } from 'react-native'
 import Api from '../../Api'
+import { ImageWarung } from '../../assets'
+import { Buttons } from '../../components'
 import { colors } from '../../utils'
 
 const Splash = ({ navigation }) => {
@@ -22,9 +24,8 @@ const Splash = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <Text style={styles.text2}>Ini Splash</Text>
-            <TouchableOpacity style={styles.btnLogin} onPress={() => navigation.navigate('Login')}>
-                <Text style={styles.text}>Ke Login</Text>
-            </TouchableOpacity>
+            <Image source={ImageWarung} style={{ width: 200, height: 200 }} />
+            <Buttons text='Ke Login' onPress={() => navigation.navigate('Login')} />
         </View>
     )
 }
